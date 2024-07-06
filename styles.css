@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --grey : #E5E5E5;
+    --grey1: #D8DFE8;
+    --grey2: #495057;
+    --grey3: #343A40;
+    --blue: #0A3871;
+    --white: #ffffff;
+    --black: #000000;
+}
+body {
+    background: var(--grey);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: column;
+    color: var(--blue);
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    flex: 1;
+}
+.containerBody{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 25rem;
+    gap: 1rem;
+    flex: 1;
+}
+
+.colunn1{
+    padding: 1rem;
+}
+
+.colunn2{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colunn3{
+    height: 90%;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 32px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15rem 2rem;
+    gap: 1rem;
+}
+
+.bodyTop{
+    flex: 1;
+    padding: 2rem;
+    font-size: 32px;
+}
+
+.bodyButton{
+    flex: 0 0 auto;
+    padding: 4rem;
+}
+
+.textInput{
+    background-color: var(--grey);
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid var(--grey1);
+    border-radius: 12px; 
+    font-size: 16px;
+    place-content: start;
+}
+
+.textBox{
+    display: flex;
+    justify-content: first baseline;
+}
+.button1{
+    background-color: #0A3871;
+    color: white;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+}
+
+.button2{
+    background-color: var(--grey1);
+    width: 328px;
+    height: 67px;
+    border-radius: 12px;
+}
+
+.textBold{
+    color: var(--grey3);
+    font-size: 24px;
+    font-weight: bold;
+}
+.textThin{
+    color: var(--grey2);
+}
+
+.containerFooter{
+    width: 100%;
+    height: 2rem;
+    background-color: #0A3871;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
