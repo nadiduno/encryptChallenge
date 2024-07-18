@@ -20,18 +20,19 @@
             <div class="colunn2">
                 <div class="bodyTop">
                     <h1>Digite seu texto</h1>
-                    <input type="text" placeholder="Digite seu texto" class="textInput">
+                    <input type="text" placeholder="Digite seu texto" id="textInput"> 
                 </div>
                 <div class="bodyButton">
                     <div class="textBox">
                         <img src="./assets/exclamation.svg" alt="Logo de Alura, é uma letra a de cor azul"/>
                         <p>Apenas letras minúsculas e sem acento</p>
                     </div>
-                    <button onclick="encrypt()" class="button1">Criptografar</button>
+                    <button onclick="getValueAndEncrypt()" class="button1">Criptografar</button>
                     <button onclick="encrypt()" class="button2">Descriptografar</button>
                 </div>
             </div>
             <div class="colunn3">
+                <p class="MensagemEncrypt"></p>
                 <img src="./assets/ImgBoy.svg" alt="Homem sentado procurando objetos" class="containerBoy" />
                 <p class="textBold">Nenhuma mensagem encontrada</p>
                 <p class="textThin">Digite um texto que você deseja criptografar ou descriptografar</p>
