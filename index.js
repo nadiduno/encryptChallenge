@@ -33,7 +33,24 @@ function encrypt(digitizedValue) {
           characterList[i] = characterList[i];
       }
     }
-    //Unindo o array em uma cadeia de carateres
+    //Unindo o array em uma cadeia de carateres novamnete
     const encryptText = characterList.join("");
     paragraphElement.textContent = encryptText;
+    clipBoard(encryptText);
+  }
+
+  function clipBoard(encryptText){
+    //Verficando se Clipboard é suportado pelo navegador
+    if (!navigator.clipboard) {
+      alert("Seu navegador não suporta a API Clipboard. Utilize um navegador mais recente.");
+      return;
+    }
+    //Usando a API Clipboard
+    navigator.clipboard.writeText(encryptText)
+    .then(() => {
+        console.log("Texto copiado para a área de transferência!");
+    })
+    .catch(error => {
+        console.error("Erro ao copiar texto:", error);
+    });
   }
