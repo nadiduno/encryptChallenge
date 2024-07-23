@@ -1,9 +1,12 @@
 var characterList = [];
-    
+var encryptText;
+
 function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;
   encrypt(digitizedValue);
+  colunn3.style.display = 'none';
+  colunn4.style.display = 'block';
   console.log(digitizedValue);
 }
   
@@ -37,14 +40,13 @@ function encrypt(digitizedValue) {
       }
     }
     //Unindo o array em uma cadeia de carateres novamnete
-    const encryptText = characterList.join("");
+    encryptText = characterList.join("");
     paragraphElement.innerHTML = '';
     paragraphElement.textContent = encryptText;
     console.log(characterList); 
-    clipBoard(encryptText);
   }
 
-  function clipBoard(encryptText){
+  function clipBoard(){
     //Verficando se Clipboard é suportado pelo navegador
     if (!navigator.clipboard) {
       alert("Seu navegador não suporta a API Clipboard. Utilize um navegador mais recente.");

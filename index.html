@@ -31,11 +31,14 @@
                     <button onclick="getValueAndDecrypt()" class="button2">Descriptografar</button>
                 </div>
             </div>
-            <div class="colunn3">
-                <p class="MensagemEncrypt"></p>
+            <div id="colunn3">
                 <img src="./assets/ImgBoy.svg" alt="Homem sentado procurando objetos" class="containerBoy" />
                 <p class="textBold">Nenhuma mensagem encontrada</p>
                 <p class="textThin">Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
+            <div id="colunn4" style="display: none;">
+                <p class="MensagemEncrypt MensagemTop"></p>
+                <button  onclick="clipBoard()" class="ButtonBottom">Copiar</button>
             </div>
         </div>
     </div>
