@@ -91,6 +91,9 @@ body {
     display: flex;
     justify-content: first baseline;
 }
+.button1,.button2,.ButtonBottom{
+    cursor: pointer;
+}
 .button1{
     background-color: #0A3871;
     color: white;
