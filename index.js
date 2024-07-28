@@ -1,6 +1,10 @@
 var characterList = [];
 var encryptText;
 
+window.onload = function() {
+  document.getElementById("textInput").focus();
+};
+
 function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;

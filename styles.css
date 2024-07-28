@@ -29,6 +29,9 @@ body {
     display: grid;
     flex: 1;
 }
+.containerLogo{
+    width: 4rem;
+}
 .containerBody{
     width: 100%;
     display: grid;
@@ -67,32 +70,47 @@ body {
 
 .bodyTop{
     flex: 1;
-    padding: 2rem;
+    padding: 2rem 0;
     font-size: 32px;
+    width: 100%;
 }
 
 .bodyButton{
     flex: 0 0 auto;
-    padding: 4rem;
+    padding: 2rem 0; 
+    width: 100%;
 }
 
-.textInput{
+#textInput{
     background-color: var(--grey);
-    /*width: 500px;
-    height: 300px;*/
+    width: 85%;
+    height: 60%;
     padding: 10px;
     border: 1px solid var(--grey1);
     border-radius: 12px; 
-    font-size: 16px;
     place-content: start;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: top;
+    margin-top: 1rem;
+    color: var(--blue);
+    border: none;
+    outline: none;
 }
+
+input::placeholder{
+    color: var(--blue);
+}
+  
 
 .textBox{
     display: flex;
     justify-content: first baseline;
+    margin-bottom: 1rem;
 }
 .button1,.button2,.ButtonBottom{
     cursor: pointer;
+    margin-right: 1.5rem;
 }
 .button1{
     background-color: #0A3871;
@@ -106,7 +124,7 @@ body {
     background-color: var(--grey1);
     width: 20rem;
     height: 4rem;
-    border-radius: 12px;
+    border-radius: 24px;
 }
 
 .textBold{
@@ -143,5 +161,5 @@ body {
     background-color: var(--grey1);
     width: 20rem;
     height: 4rem;
-    border-radius: 12px;
+    border-radius: 24px;
 }
