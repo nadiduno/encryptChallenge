@@ -162,4 +162,26 @@ input::placeholder{
     width: 20rem;
     height: 4rem;
     border-radius: 24px;
+} 
+
+.containerBoy{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container,.containerBody{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .colunn2{
+        width: 90%;
+    }
+    .button2{
+        margin-top: 1.5rem;
+    }
+    .containerBoy{
+        display: none;
+    }
 }
