@@ -5,12 +5,18 @@ window.onload = function() {
   document.getElementById("textInput").focus();
 };
 
+function resetObjet(){
+  alert('Digite seu texto. Apenas letras minúsculas e sem acento')
+  colunn3.style.display = 'block';
+  colunn4.style.display = 'none';
+  document.getElementById("textInput").focus();
+}
+
 function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;
   if (digitizedValue.trim() === ""){
-    alert('Digite seu texto. Apenas letras minúsculas e sem acento')
-    document.getElementById("textInput").focus();
+    resetObjet()
     return;
   }
   encrypt(digitizedValue);
@@ -79,8 +85,7 @@ function getValueAndDecrypt() {
     var digitizedValue = undefined 
     digitizedValue = document.getElementById("textInput").value;
     if (digitizedValue.trim() === ""){
-      alert('Digite seu texto. Apenas letras minúsculas e sem acento')
-      document.getElementById("textInput").focus();
+      resetObjet()
       return;
     }  
     decrypt(digitizedValue);

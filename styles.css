@@ -181,7 +181,17 @@ input::placeholder{
     .button2{
         margin-top: 1.5rem;
     }
-    .containerBoy{
-        display: none;
+    #colunn4{
+        width: 100%; /* Ocupa toda a largura disponível */
+  display: flex; /* Permite organizar o conteúdo flexivelmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /*
+    }
+    .ButtonBottom{
+        flex: 1;
+        max-width: 100%;      
+    }
+    .containerFooter{
+        margin-top: 2rem;
     }
 }
