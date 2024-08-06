@@ -18,9 +18,14 @@ function validationText(){
   colunn3.style.display = 'block';
   colunn4.style.display = 'none';
 }
+
 function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;
+  if (digitizedValue.trim() === ""){
+    validationText();
+    return;
+  }
   encrypt(digitizedValue);
   textInput.value = "";
   colunn3.style.display = 'none';
@@ -86,6 +91,10 @@ function encrypt(digitizedValue) {
 function getValueAndDecrypt() {
     var digitizedValue = undefined 
     digitizedValue = document.getElementById("textInput").value;
+    if (digitizedValue.trim() === ""){
+      validationText();
+      return;
+    }
     decrypt(digitizedValue);
     textInput.value = "";
     colunn3.style.display = 'none';
