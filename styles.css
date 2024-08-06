@@ -88,7 +88,6 @@ body {
     padding: 10px;
     border: 1px solid var(--grey1);
     border-radius: 12px; 
-    place-content: start;
     font-size: 2rem;
     line-height: 1;
     text-align: top;
@@ -155,8 +154,9 @@ input::placeholder{
     text-align: left;
 }
 
+
 .ButtonBottom{
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
     width: 100%;
     background-color: var(--grey1);
     width: 20rem;

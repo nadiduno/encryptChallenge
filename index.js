@@ -8,6 +8,11 @@ window.onload = function() {
 function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;
+  if (digitizedValue.trim() === ""){
+    alert('Digite seu texto. Apenas letras minúsculas e sem acento')
+    document.getElementById("textInput").focus();
+    return;
+  }
   encrypt(digitizedValue);
   textInput.value = "";
   colunn3.style.display = 'none';
@@ -18,6 +23,7 @@ function getValueAndEncrypt() {
 function encrypt(digitizedValue) {
     const paragraphElement = document.querySelector('.MensagemEncrypt');
     var characterList = [];
+
     for (let i = 0; i < digitizedValue.length; i++) {
       
       //Guardando os caracteres em minusculos em uma lista 
@@ -72,6 +78,11 @@ function encrypt(digitizedValue) {
 function getValueAndDecrypt() {
     var digitizedValue = undefined 
     digitizedValue = document.getElementById("textInput").value;
+    if (digitizedValue.trim() === ""){
+      alert('Digite seu texto. Apenas letras minúsculas e sem acento')
+      document.getElementById("textInput").focus();
+      return;
+    }  
     decrypt(digitizedValue);
     textInput.value = "";
     colunn3.style.display = 'none';
