@@ -9,6 +9,7 @@ function getValueAndEncrypt() {
   var digitizedValue = undefined  
   digitizedValue = document.getElementById("textInput").value;
   encrypt(digitizedValue);
+  textInput.value = "";
   colunn3.style.display = 'none';
   colunn4.style.display = 'block';
   console.log(digitizedValue);
@@ -59,7 +60,9 @@ function encrypt(digitizedValue) {
     //Usando a API Clipboard
     navigator.clipboard.writeText(encryptText)
     .then(() => {
-        console.log("Texto copiado para a área de transferência!");
+      colunn3.style.display = 'block';
+      colunn4.style.display = 'none';    
+      console.log("Texto copiado para a área de transferência!");
     })
     .catch(error => {
         console.error("Erro ao copiar texto:", error);
@@ -70,6 +73,9 @@ function getValueAndDecrypt() {
     var digitizedValue = undefined 
     digitizedValue = document.getElementById("textInput").value;
     decrypt(digitizedValue);
+    textInput.value = "";
+    colunn3.style.display = 'none';
+    colunn4.style.display = 'block';
     console.log(digitizedValue);
 }
  
